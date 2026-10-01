@@ -1,0 +1,29 @@
+{
+  "name": "phonebook_backend",
+  "version": "1.0.0",
+  "description": "phonebook backend of part3 3a",
+  "license": "MIT",
+  "author": "Hub2jo",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon -L index.js",
+    "build:ui": "rm -rf dist && cd frontend && npm run build && cp -r dist ..",
+    "lint": "eslint . && cd frontend && npm run lint",
+    "test:e2e": "playwright test"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.3",
+    "express": "^5.2.1",
+    "mongoose": "^9.0.0",
+    "morgan": "^1.10.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.1",
+    "@playwright/test": "^1.63.0",
+    "@stylistic/eslint-plugin": "^5.6.1",
+    "eslint": "^9.39.1",
+    "globals": "^16.5.0",
+    "nodemon": "^3.1.11"
+  }
+}
